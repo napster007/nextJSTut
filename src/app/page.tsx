@@ -12,6 +12,12 @@ export default function Home() {
           <li>
             <Link href="/products">Products</Link>
           </li>
+           <li>
+            <Link href="/articles/breaking-news-123?lang=en">Read in English</Link>
+          </li>
+          <li>
+            <Link href="/articles/breaking-news-123?lang=es">Read in Spanish</Link>
+          </li>
         </ul>
       </nav>
     </main>
