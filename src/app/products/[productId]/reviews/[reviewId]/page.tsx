@@ -1,15 +1,22 @@
-import {notFound, redirect} from "next/navigation";
+import {notFound} from "next/navigation";
 
+function getRandomInt(count: number) {
+  return Math.floor(Math.random() * count); //The maximum is inclusive and the minimum is inclusive
+}
 export default async function ReviewDetails({
   params,
 }: {
   params: Promise<{reviewId: string; productId: string}>;
 }) {
+  const random = getRandomInt(2);
+  if (random === 1) {
+    throw new Error("Random error occurred!");
+  }
   const productId = (await params).productId;
   const reviewId = (await params).reviewId;
   if (parseInt(reviewId) > 1000) {
-    //notFound();
-    redirect("/products");
+    notFound();
+    //redirect("/products");
   }
 
   return (
