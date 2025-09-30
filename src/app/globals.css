@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@theme {
+  /* You can add custom properties here */
+  --color-primary: #66bb6a;
+  --font-body: ui-sans-serif, system-ui, sans-serif;
+}
